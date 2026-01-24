@@ -1,16 +1,18 @@
+import { Home } from "./pages/Home"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { NotFound } from "./pages/NotFound"
 
 function App() {
   return (
-    <>
-    {/* Theme */}
+    <>  
+    <BrowserRouter>
+      <Routes>
 
-    {/* NavBar */}
-
-    {/* skills */}
-
-    {/* Projects */}
-
-    {/* Footer */}
+        <Route index element={<Home />} />
+        <Route path='*' element={<NotFound />} />
+      
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }

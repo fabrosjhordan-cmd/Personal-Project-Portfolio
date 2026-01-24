@@ -1,15 +1,18 @@
+import { NavBar } from "../components/NavBar"
+import { ThemeToggle } from "../components/ThemeToggle"
+
 export const Home = () =>{
     return (
-        <div>
-            {/* Theme */}
+        <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+        {/* Theme */}
+        <ThemeToggle />
+        {/* NavBar */}
+        <NavBar />
+        {/* Skills */}
 
-            {/* NavBar */}
+        {/* Projects */}
 
-            {/* Skills */}
-
-            {/* Projects */}
-
-            {/* Footer */}
+        {/* Footer */}
         </div>
     )
 }
