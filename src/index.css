@@ -1,0 +1,19 @@
+@font-face {
+  font-family: Bubbler;
+  src: url('./assets/fonts/BubblerOne-Regular.ttf');
+}
+
+@import 'tailwindcss';
+
+
+@theme {
+  --font-bubbler: Bubbler, 'sans-serif'
+  --color-primary: hsl(var(---primary));
+  --color-primary-foreground: hsl(var(--primary-foreground)) 
+}
+
+/* background */
+/* button */
+/* cards */
+/* animations */
+
