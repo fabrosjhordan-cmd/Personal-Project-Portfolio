@@ -12,10 +12,12 @@
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
 
-  --color-primary: hsl(var(---primary));
+  --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
 }
 
+/* background */
+/* button */
 @layer base {
   :root {
     --background: 210 40% 98%;
@@ -50,18 +52,46 @@
   .font-serif{
     font-family: "Playfair Display", serif;
   }
-
 }
 
-
+/* Base Layout */
 #root {
   max-width: 100%;
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
-/* background */
-/* button */
+
+/* Screens */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+/*  */
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.5)
+}
+
+
+
 /* cards */
 /* animations */
 
