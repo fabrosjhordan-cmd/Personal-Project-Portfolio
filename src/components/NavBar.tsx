@@ -4,7 +4,6 @@ import { BiMenu, BiX } from "react-icons/bi";
 
 const NavLinks = [
     {href: '#hero' , label: 'Home'},
-    {href: '#links' , label: 'Links'},
     {href: '#skills' , label: 'Skills'},
     {href: '#project' , label: 'Projects'},
 ]
