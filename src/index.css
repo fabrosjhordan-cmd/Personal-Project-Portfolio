@@ -10,11 +10,14 @@
 @theme {
   --font-bubbler: Bubbler, 'sans-serif';
 
+  --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
 
   --color-primary: hsl(var(--primary));
   --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-card: hsl(var(--card));
 
   --animate-fade-in: fade-in 0.7s ease-out forwards;
   --animate-fade-in-delay-1: fade-in 0.7s ease-out 0.2s forwards;
@@ -59,16 +62,28 @@
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
 
+    --card: 0 0% 100%;
+
     --primary: 250 47% 60%;
     --primary-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%
   }
 
   .dark{
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
 
+    --card: 222 47% 8%;
+
     --primary: 250 65% 65%;
     --primary-foreground: 213 31% 91%;
+
+    --border:  217 33% 20%;
+  }
+
+  * {
+     border: var(--border);
   }
 
   html {
@@ -132,10 +147,21 @@
   text-shadow: 0 0 10px rgba(167, 139, 250, 0.5)
 }
 
-@utility hero-button {
-  @apply bg-primary text-foreground px-9 py-2 rounded-xl
+@utility gradient-border {
+  @apply relative rounded-md;
+  background: linearGradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+  border: 1px solid transparent;
 }
 
+@utility hero-button {
+  @apply bg-primary text-primary-foreground font-medium px-6 py-2 rounded-full 
+  transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)] :hover:scale-105 active:scale-95 
+}
+
+@utility card-hover{
+  @apply transition-transform duration-300 hover:scale-102 hover:shadow-lg
+}
 
 
 /* cards */

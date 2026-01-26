@@ -15,8 +15,8 @@ export const HeroSection = () =>{
                         A Junior Software Engineer specializing on ReactJS and Typescript creating apps which is responsive and dynamic.
                     </p>
 
-                    <div>
-                        <a href="#projects" className="opacity-0 hero-button animate-fade-in-delay-4">View My Projects</a>
+                    <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+                        <a href="#projects" className="hero-button">View My Projects</a>
                     </div>
                 </div>
             </div>
