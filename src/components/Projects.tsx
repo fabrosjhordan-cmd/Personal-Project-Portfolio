@@ -5,7 +5,7 @@ import { ImNewTab } from "react-icons/im"
 const projects =[
     {title: 'Simple Blog', image: '/simple_blog_pic.png', tags: ['Typescript', 'Supabase/PostgreSQL'], intro: 'A Simple Blog made by using ReactJS and Supabase with Tailwind styling.', vercel: 'https://simpleblog-puce.vercel.app/', github: 'https://github.com/fabrosjhordan-cmd/simple-blog-react-redux' },
 
-    {title: 'Simple Quiz Game', image: '/quiz_game_pic.png', tags: ['HTML', 'Javascript', 'Javascript'], intro: 'A game to test your knowledge with randomized questions ', vercel: '', github: 'https://github.com/fabrosjhordan-cmd/quiz-game'},
+    {title: 'Simple Quiz Game', image: '/quiz_game_pic.png', tags: ['HTML', 'Javascript'], intro: 'A game to test your knowledge with randomized questions ', vercel: '', github: 'https://github.com/fabrosjhordan-cmd/quiz-game'},
 
     {title: 'Weather App', image: '/weather_app.png', tags: ['HTML', 'Javascript'], intro: 'An application that uses API calls in Open Weather Map website', vercel: '', github: 'https://github.com/fabrosjhordan-cmd/weatherapp'},
 
