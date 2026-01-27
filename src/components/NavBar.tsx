@@ -5,7 +5,7 @@ import { BiMenu, BiX } from "react-icons/bi";
 const NavLinks = [
     {href: '#hero' , label: 'Home'},
     {href: '#skills' , label: 'Skills'},
-    {href: '#project' , label: 'Projects'},
+    {href: '#projects' , label: 'Projects'},
 ]
 
 export const NavBar = () =>{
@@ -14,14 +14,16 @@ export const NavBar = () =>{
 
     useEffect(()=>{
         const handleScroll = () =>{
-            setIsScrolled(window.screenY > 10)
+            setIsScrolled(window.screenY > 10);
         }
         window.addEventListener('scroll', handleScroll);
         return ()=> window.removeEventListener('scroll', handleScroll)
     }, [])
 
+
+
     return(
-            <nav className={`fixed w-full z-40 transition-all duration-300 ${isScrolled ? 'py-3 bg-background/80 backdrop-blur-md shadow-xs' : 'py-5'}`}>
+            <nav className={`fixed w-full z-40 transition-all duration-300 font-bubbler ${isScrolled ? 'py-5 bg-background/80 backdrop-blur-md shadow-xs' : 'py-5'}`}>
             <div className="container flex items-center justify-between">
                 <a href='#hero' className="text-xl font-bold text-primary flex items-center">
                     <span className="relative z-10">

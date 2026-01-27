@@ -27,7 +27,7 @@ export const Skills = () =>{
     const filteredSkills = skills.filter((skill)=> activeCategory === 'all' || skill.category === activeCategory)
 
     return (
-        <section id='skills' className="relative px-4 py-24 bg-primary-foreground/1 mb-12 rounded-xl">
+        <section id='skills' className="relative px-4 py-12 bg-primary-foreground/1 mb-12 rounded-xl">
             <div className="container mx-auto max-w-5xl">
                 <h2 className="text-primary text-5xl font-bold mb-12">Skills</h2>
 

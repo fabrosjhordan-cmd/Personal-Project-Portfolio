@@ -16,7 +16,7 @@ export const HeroSection = () =>{
                     </p>
 
                     <div className="pt-4 opacity-0 animate-fade-in-delay-4">
-                        <a href="#projects" className="hero-button">View My Projects</a>
+                        <a href="#projects" className="project-button">View My Projects</a>
                     </div>
                 </div>
             </div>
