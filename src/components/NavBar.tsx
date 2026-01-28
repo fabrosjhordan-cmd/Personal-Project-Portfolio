@@ -41,11 +41,11 @@ export const NavBar = () =>{
                 </div>
                 
                 {/* Small */}
-                <button className='md:hidden mx-4 p-2 text-foreground z-50' aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}>{isMenuOpen ? <BiX onClick={()=>{setIsMenuOpen(false)}} className="h-6 w-6"/> : <BiMenu onClick={()=>{setIsMenuOpen(true)}} className="h-6 w-6" />}</button>
+                <button className='md:hidden p-2 text-foreground z-50' aria-label={isMenuOpen ? 'Close Menu' : 'Open Menu'}>{isMenuOpen ? <BiX onClick={()=>{setIsMenuOpen(false)}} className="h-6 w-6"/> : <BiMenu onClick={()=>{setIsMenuOpen(true)}} className="h-6 w-6" />}</button>
                 <div className={`fixed inset-0 bg-background/95 backdrop-blur-xs z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden ${isMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
                     <div className="flex flex-col space-y-8 text-xl">
                         {NavLinks.map((link, key) =>(
-                            <a key={key} href={link.href} className="text-foreground/80 hover:text-primary hover:text-glow transition-colors duration-200">
+                            <a key={key} href={link.href} onClick={()=>setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary hover:text-glow transition-colors duration-200">
                                 {link.label}
                             </a>
                         ))
