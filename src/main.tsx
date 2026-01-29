@@ -9,6 +9,7 @@ document.fonts.ready.then(()=>{
     document.documentElement.classList.add('fonts-loaded')
 })
 
+// Alert JS
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

@@ -19,7 +19,9 @@ export const Footer = () =>{
 
         setTimeout(()=>{
             setActive(false);
-        }, 1000)
+            setEmail('');
+            setMessageValue('');
+        }, 1000);
 
     }
 
