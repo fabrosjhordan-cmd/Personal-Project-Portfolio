@@ -8,12 +8,28 @@ import { SiIndeed } from "react-icons/si";
 import { TbBrandGmail } from "react-icons/tb";
 import emailjs from '@emailjs/browser';
 
+import { ToastContainer, toast } from 'react-toastify';
 
 export const Footer = () =>{
     const [active, setActive] = useState(false);
     const [email, setEmail] = useState('')
     const [messageValue, setMessageValue] = useState('');
 
+    const successToast = () => toast.success("Email sent!", {
+        position: "bottom-right",
+        hideProgressBar: true,
+        theme: "dark",
+        pauseOnHover: false,
+        closeOnClick: true
+    });
+
+    const errorToast = () => toast.error('Error occured message not sent.',{
+        position: "bottom-right",
+        hideProgressBar: true,
+        theme: "dark",
+        pauseOnHover: false,
+        closeOnClick: true
+    });
 
     const sendMessage = async (event: any) =>{
         event.preventDefault();
@@ -29,10 +45,11 @@ export const Footer = () =>{
             setActive(false);
             setEmail('');
             setMessageValue('');
+            successToast();
         }catch(error){
             console.log(error);
+            errorToast();
         }
-
     }
 
     return (
@@ -125,6 +142,7 @@ export const Footer = () =>{
                         {active ?  <BiLoader className="animate-spin infinite" /> : <IoIosSend />}
                         {active ? 'Sending...' : 'Send' }
                         </button>
+                        <ToastContainer />
                     </div>
                 </form>
                 </div>
@@ -132,3 +150,11 @@ export const Footer = () =>{
         </footer>
     )
 }
+
+
+
+
+{/* <div>
+    <button onClick={successToast}>Success</button>
+    <button onClick={errorToast}>Error</button>
+</div> */}
