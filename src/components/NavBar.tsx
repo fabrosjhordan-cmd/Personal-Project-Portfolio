@@ -14,13 +14,11 @@ export const NavBar = () =>{
 
     useEffect(()=>{
         const handleScroll = () =>{
-            setIsScrolled(window.screenY > 10);
+            setIsScrolled(window.scrollY > 10);
         }
         window.addEventListener('scroll', handleScroll);
         return ()=> window.removeEventListener('scroll', handleScroll)
     }, [])
-
-
 
     return(
             <nav className={`fixed w-full z-40 transition-all duration-300 font-bubbler ${isScrolled ? 'py-5 bg-background/80 backdrop-blur-md shadow-xs' : 'py-5'}`}>
