@@ -6,7 +6,7 @@ export const ThemeToggle = () =>{
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(()=>{
-        const storedTheme = localStorage.getItem('theme');
+        const storedTheme = localStorage.getItem('theme') || 'dark';
         if(storedTheme === 'dark'){
             document.documentElement.classList.add('dark');
             setIsDarkMode(true);
@@ -19,7 +19,7 @@ export const ThemeToggle = () =>{
         }
         window.addEventListener('scroll', handleScroll);
         return ()=> window.removeEventListener('scroll', handleScroll)
-    }, [])
+    }, []);
     
     const ToggleTheme = () =>{
         if(isDarkMode){
@@ -34,7 +34,7 @@ export const ThemeToggle = () =>{
     }
 
     return (
-    <button onClick={ToggleTheme} className={`fixed max-sm:top-5 max-sm:right-1 max-sm:hidden ${isScrolled ? 'top-2' : 'top-3'} z-0 right-7 z-50 p-2 rounded-full transition-all duration-300 focus:outline-hidden`}>
+    <button onClick={ToggleTheme} className={`fixed max-sm:top-5 max-sm:right-1 ${isScrolled ? 'top-2' : 'top-3'} z-0 right-7 z-50 p-2 rounded-full transition-all duration-300 focus:outline-hidden`}>
         {isDarkMode ?  <CiCloudMoon className="w-6 h-6 text-blue-700" /> : <CiSun className="w-6 h-6 text-yellow-600"/>}
     </button>)
 }

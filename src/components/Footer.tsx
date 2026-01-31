@@ -7,7 +7,6 @@ import { MdOutlineWorkOutline } from "react-icons/md";
 import { SiIndeed } from "react-icons/si";
 import { TbBrandGmail } from "react-icons/tb";
 import emailjs from '@emailjs/browser';
-
 import { ToastContainer, toast } from 'react-toastify';
 
 export const Footer = () =>{
