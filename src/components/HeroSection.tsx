@@ -1,7 +1,18 @@
+import { useEffect, useState } from "react";
 import { BsArrowDown } from "react-icons/bs"
 
 
 export const HeroSection = () =>{
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(()=>{
+        const handleScroll = () =>{
+            setIsScrolled(window.scrollY > 10);
+        }
+        window.addEventListener('scroll', handleScroll);
+        return ()=> window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return (
         <section id='hero' className="relative min-h-screen flex flex-col items-center justify-center px-4">
             <div className="container max-w-4xl mx-auto text-center z-10">
@@ -21,7 +32,7 @@ export const HeroSection = () =>{
                 </div>
             </div>
 
-            <div className="absolute bottom-7 flex flex-col items-center animate-bounce">
+            <div className={`${isScrolled ? 'hidden' : 'absolute bottom-7 flex flex-col items-center animate-bounce'}`}>
                 Scroll
                 <span><BsArrowDown className="text-primary" /></span>
             </div>

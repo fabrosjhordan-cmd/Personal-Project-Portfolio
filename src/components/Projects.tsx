@@ -3,6 +3,8 @@ import { ImNewTab } from "react-icons/im"
 
 
 const projects =[
+    {title: 'Sample Shoe Store', image: '/shoe_store_sample_pic.png', tags: ['Typescript', 'ReactJS', 'HTML'], intro: 'A website that lets the users purchase footwares/shoes through online.', vercel: '', github: 'https://github.com/fabrosjhordan-cmd/Shoe-Sample-Store'},
+
     {title: 'Simple Quiz Game', image: '/quiz_game_pic.png', tags: ['HTML', 'Javascript'], intro: 'A game to test your knowledge with randomized questions ', vercel: 'https://quiz-game-theta-beryl.vercel.app/', github: 'https://github.com/fabrosjhordan-cmd/quiz-game'},
 
     {title: 'Weather App', image: '/weather_app.png', tags: ['HTML', 'Javascript'], intro: 'An application that uses API calls in Open Weather Map website', vercel: '', github: 'https://github.com/fabrosjhordan-cmd/weatherapp'},
@@ -10,9 +12,8 @@ const projects =[
     {title: 'Expense Tracker', image: '/expense_tracker_pic.png', tags: ['HTML', 'Javascript', 'MySQL'], intro: 'An application that lets the user manage their finance; record their expenses and incomes', vercel: '', github: 'https://github.com/fabrosjhordan-cmd/expensetracker'},
 
      {title: 'Simple Blog', image: '/simple_blog_pic.png', tags: ['Typescript', 'Supabase/PostgreSQL'], intro: 'A Simple Blog made by using ReactJS and Supabase with Tailwind styling.', vercel: 'https://simpleblog-puce.vercel.app/', github: 'https://github.com/fabrosjhordan-cmd/simple-blog-react-redux' },
-
-     
 ]
+
 export const Projects = () =>{
     return (
         <section id="projects" className="relative px-4 py-24 bg-primary-foreground/1 mb-24 rounded-xl">

@@ -21,7 +21,7 @@ export const Home = () =>{
                 <NavBar />
 
 
-            <div id="home" className="min-h-screen container bg-background text-foreground overflow-x-hidden ">
+            <div id="home" className="min-h-screen container bg-background text-foreground overflow-x-hidden">
             {/* Main Body */}
             <main> 
                 <HeroSection />
