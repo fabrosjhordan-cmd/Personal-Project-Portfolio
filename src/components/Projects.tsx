@@ -3,7 +3,7 @@ import { ImNewTab } from "react-icons/im"
 
 
 const projects =[
-    {title: 'Sample Shoe Store', image: '/shoe_store_sample_pic.png', tags: ['Typescript', 'ReactJS', 'HTML'], intro: 'A website that lets the users purchase footwares/shoes through online.', vercel: '', github: 'https://github.com/fabrosjhordan-cmd/Shoe-Sample-Store'},
+    {title: 'Sample Shoe Store', image: '/shoe_store_sample_pic.png', tags: ['Typescript', 'ReactJS', 'HTML'], intro: 'A website that lets the users purchase footwares/shoes through online.', vercel: 'https://shoe-sample-store.vercel.app/', github: 'https://github.com/fabrosjhordan-cmd/Shoe-Sample-Store'},
 
     {title: 'Simple Quiz Game', image: '/quiz_game_pic.png', tags: ['HTML', 'Javascript'], intro: 'A game to test your knowledge with randomized questions ', vercel: 'https://quiz-game-theta-beryl.vercel.app/', github: 'https://github.com/fabrosjhordan-cmd/quiz-game'},
 
@@ -18,7 +18,6 @@ export const Projects = () =>{
     return (
         <section id="projects" className="relative px-4 py-24 bg-primary-foreground/1 mb-24 rounded-xl">
             <h1 className="font-bold text-5xl text-primary mb-12">Projects</h1>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((repo, key)=>(
                     <div key={key} className="relative group bg-card rounded-lg overflow-hidden shadow-xs card-hover px-2 py-1">
