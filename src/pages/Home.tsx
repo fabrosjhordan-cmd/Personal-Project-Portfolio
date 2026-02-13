@@ -10,7 +10,6 @@ import emailjs from '@emailjs/browser';
 export const Home = () =>{
     useEffect(()=>{
         emailjs.init(import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
-        console.log("PUBLIC KEY:", import.meta.env.VITE_EMAILJS_PUBLIC_KEY);
     }, []);
     
     return (
