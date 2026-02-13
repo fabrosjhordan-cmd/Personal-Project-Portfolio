@@ -46,6 +46,7 @@ export const Footer = () =>{
             setMessageValue('');
             successToast();
         }catch(error){
+            setActive(false);
             console.log(error);
             errorToast();
         }
